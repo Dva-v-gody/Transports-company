@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Open-Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: local('OpenSans-Semibold'),
+    url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Semibold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RoadRadio-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('RoadRadio-Regular'),
+    url('../fonts/RoadRadio-Regular.woff2') format('woff2'),
+    url('../fonts/RoadRadio-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RoadRadio-Bold';
+  font-weight: 400;
+  font-style: normal;
+  src: local('RoadRadio-Bold'),
+    url('../fonts/RoadRadio-Bold.woff2') format('woff2'),
+    url('../fonts/RoadRadio-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RoadRadio-Black';
+  font-weight: 400;
+  font-style: normal;
+  src: local('RoadRadio-Black'),
+    url('../fonts/RoadRadio-Black.woff2') format('woff2'),
+    url('../fonts/RoadRadio-Black.woff') format('woff');
+  font-display: swap;
+}

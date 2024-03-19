@@ -1,0 +1,794 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+@import 'reset';
+@import 'global';
+
+.title {
+  font-size: 72px;
+  @extend %roadradio-400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  span {
+    color: $accent;
+    @extend %roadradio-700;
+  }
+}
+
+.header{
+  padding: 40px 0;
+  background-color: $color-bg;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.menu{
+  &__btn{
+    display: none;
+  }
+  &__list{
+    display: flex;
+  }
+  &__list-link {
+    @extend %roadradio-700;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+  
+    &:hover {
+      border-bottom: 1px solid $accent;
+      color: $accent;
+    }
+  }
+  &__list-item{
+    padding: 0 20px;    
+  }
+  
+}
+
+.phone{  
+  &__link{
+    font-size: 20px;
+    @extend %roadradio-700;
+    padding-left: 30px;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/call.svg);
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 0px;
+    }
+  }
+}
+
+.content{
+  padding-top: 125px;
+  background-color: $color-bg;
+}
+
+.main{
+  height: 850px;
+  width: 100%;
+  background-image: url(../images/main-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &__inner{
+    width: 685px;
+    padding-top: 260px;
+  }
+  &__title{
+    margin-bottom: 35px;
+  }
+  &__apply{
+    margin-right: 25px;
+  }
+}
+
+.about {
+  width: 100%;
+
+  &__inner-top {
+    padding: 120px 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/smoke-left.png);
+      width: 250px;
+      height: 550px;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/smoke-right.png);
+      width: 180px;
+      height: 550px;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__inner-bottom {
+    padding: 100px 0 40px;
+    background-image: url(../images/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.drivers{
+  display: flex;
+  justify-content: space-between;
+  &__box{
+    width: 680px;
+    height: 500;
+    position: relative;
+  }
+  &__box-qualifications{
+    p{
+      padding-left: 70px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      top: -150px;
+      left: 285px;
+      background-image: url(../images/icons/qualifications.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }    
+  }
+  &__box-training{
+    &::before {
+      content: '';
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      top: -150px;
+      left: 285px;
+      background-image: url(../images/icons/drivers.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }    
+  }
+  &__title{
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 52px;
+    text-align: center;
+    @extend %roadradio-700;
+    margin-bottom: 30px;
+  }
+  &__text{
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.why{
+  padding: 120px 0 60px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/smoke-left-why.png);
+    background-repeat: no-repeat;
+    width: 268px;
+    height: 614px;
+    left: 0;
+    top: 490px;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    background-image: url(../images/smoke-right-why.png);
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 640px;
+    right: 0;
+    top: 0;
+  }
+  &__title{
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__inner-left{
+    margin-right: 10px;
+  }
+  &__inner-right{
+    margin-left: 10px;
+  }
+  &__item{
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background: linear-gradient(270deg, #081724 12.45%, rgba(8, 23, 36, 0.00) 100%), #1B2733;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.equipment{
+  padding: 60px 0;
+  position: relative;
+  z-index: 10;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/bg-equipment.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 540px;
+    z-index: -1;
+  }
+  &__title{
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &__text{
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 60px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 100%;
+    & + .equipment__item{
+      margin-left: 40px;
+    }
+  }
+  &__item-img{
+    height: 300px;
+  }
+  &__item-info{
+    padding: 30px;
+  }
+}
+
+.reviews{
+  padding: 120px 0;
+  position: relative;
+  &__title{
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  &__btn{
+    margin: 0 auto;
+    display: block;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/smoke-left-reviews.png);
+    background-repeat: no-repeat;
+    left: 0;
+    top: -40px;
+    width: 260px;
+    height: 610px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/smoke-right-reviews.png);
+    background-repeat: no-repeat;
+    right: 0;
+    top: 100px;
+    width: 260px;
+    height: 640px;
+  }
+  &__counter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #081724;
+    margin-bottom: 90px;
+  }
+  &__counter-item {
+    padding: 50px 30px;
+    margin: 0 10px;
+    border-radius: 15px;
+    border-right: 1px solid #E74E0F;
+    background: linear-gradient(270deg, #081724 12.45%, rgba(8, 23, 36, 0.00) 100%), #1B2733;
+    span {
+      color: #E74E0F;
+      font-size: 36px;
+    }
+  }
+  &__counter-value {
+    display: block;
+    @extend %roadradio-900;
+    color: #E74E0F;
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  &__counter-text{
+    line-height: 40px;
+  }
+}
+
+.slider{
+  margin-bottom: 60px;
+  &__item{
+    max-width: 680px;
+    min-height: 360px;
+    padding: 30px;
+    border-radius: 15px;
+    background: linear-gradient(270deg, #081724 12.45%, rgba(8, 23, 36, 0.00) 100%), #1B2733;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      right: 40px;
+      background-image: url(../images/icons/quotes.svg);
+      background-repeat: no-repeat;
+    }
+  }
+  &__item-img{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    left: 275px;
+    border-radius: 15px;
+  }
+  &__item-author{
+    margin-bottom: 30px;
+  }
+}
+
+.slick-slide{
+  padding-top: 50px;
+}
+
+.footer{
+  padding: 80px 0 70px;
+  background-color: #1B2733;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &__logo{
+    width: 375px;
+  }
+  &__logo-link{
+    display: block;
+    margin-bottom: 30px;
+  }
+  &__contacts{
+    width: 340px;
+  }
+  &__contacts-title{
+    margin-bottom: 30px;
+  }
+  &__adress,
+  &__phone,
+  &__email{
+    display: block;
+    padding-left: 25px;
+    position: relative;
+    @extend %opensans-600;
+    line-height: 40px;
+  }
+  &__adress{
+    &::before{
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 10px;
+      background-image: url(../images/icons/home-icon.svg);
+    }
+  }
+  &__phone{
+    &::before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 10px;
+      background-image: url(../images/icons/phone-icon.svg);
+    }
+  }
+  &__email{
+    &::before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 9px;
+      left: 0;
+      top: 16px;
+      background-image: url(../images/icons/email-icon.svg);
+    }
+  }
+  &__social{
+    width: 330px;
+  }
+  &__social-title{
+    margin-bottom: 30px;
+  }
+  &__social-item{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 1270px){
+  .about{
+    &__inner-top{
+      padding: 30px 0;
+    }
+  }
+  .drivers{
+    display: block;
+    &__box{
+      width: 100%;
+      margin: 0 auto 80px;
+      &::before{
+        top: -10px;
+        left: 0;
+        width: 60px;
+        height: 60px;
+      }
+    }
+    &__box-qualifications{
+      p{
+        padding-left: 0;
+      }
+    }
+  }
+  .reviews{
+    &__counter-item{
+      width: 47%;
+      margin: 0 auto 30px;
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .menu{
+    &__list-item{
+      padding: 0 10px;
+    }
+  }
+  .why-img{
+    display: none;
+  }
+  .why{
+    padding: 60px 0 30px;
+    &__inner{
+      display: block;
+    }
+    &__inner-left{
+      margin-left: 10px;
+      margin-bottom: 40px;
+    }
+  }
+  .equipment{
+    &__items{
+      display: block;
+    }
+    &__item{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__item-info{
+      padding: 15px;
+    }
+    &__item+.equipment__item{
+      margin-left: 0;
+    }
+    &__title{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 1100px){
+  .footer{
+    padding: 80px 0 110px;
+    &__logo,
+    &__contacts{
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    &__contacts-title{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .menu{
+    order: 1;
+    margin-left: 40px;
+    &__list {
+        transform: translateY(-200%);
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        z-index: 5;
+        transition: all .3s;
+        background-color: #fff;
+    
+        &.menu__list--active {
+          transform: translateY(0%);
+          background-color: #081724;
+          padding: 10px 0;
+        }
+      }
+    
+      &__list-item+.menu__list-item {
+        padding-left: 15px;
+      }
+    
+      &__list-item {
+        width: 100%;
+        padding: 0 15px;
+        text-align: center;
+      }
+    
+      &__list-link {
+        padding: 20px 0 0;
+        display: block;
+      }
+    
+      &__btn {
+        width: 30px;
+        height: 23px;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 0;
+    
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $accent;
+        }
+    
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: $accent;
+        }
+    
+        &::before {
+          top: 0;
+        }
+    
+        &::after {
+          bottom: 0;
+        }
+      }
+  }
+  .phone{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 900px){
+  .main{
+    height: 730px;
+    &__inner{
+      padding-top: 200px;
+    }
+  }
+  .why{
+    padding: 50px 0 30px;
+  }
+  .equipment {
+    &::before{
+      background-image: none;
+    }
+    &__items {
+      display: block;
+    }
+  
+    &__item {
+      display: block;
+    }
+  }
+  .reviews{
+    padding: 10px 0 30px;
+  }
+}
+
+@media (max-width: 740px){
+  .main{
+    height: 660px;
+    &__inner{
+      width: 100%;
+      padding-top: 140px;
+    }
+    .button{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__apply{
+      margin-right: 0;
+    }
+  }
+  .title{
+    font-size: 58px;
+  }
+  .why{
+    &__item{
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    &__inner-left{
+      margin-bottom: 20px;
+    }
+    &__title{
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .drivers{
+    &__title{
+      font-size: 38px;
+      line-height: 40px;
+    }
+    &__box{
+      p{
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+  }
+  .reviews {
+    &__counter-item {
+      width: 80%;
+      padding: 30px 30px;
+    }
+  }
+  .slider{
+    &__item{
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 25px 0;
+    &__inner {
+      padding-right: 0;
+    }
+  }
+
+  .menu {
+    order: 0;
+
+    &__list {
+      top: 140px;
+    }
+    &__list-link{
+      padding: 15px 0 0;
+    }
+  }
+
+  .phone {
+    width: 100%;
+    margin-top: 35px;
+    justify-content: flex-end;
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+  .title{
+    font-size: 48px;
+  }
+  .equipment{
+    padding: 30px 0;
+    &__item-img{
+      height: 100%;
+    }
+  }
+  .drivers{
+    &__box{
+      &::before{
+        top: -70px;
+      }
+    }
+    &__title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 15px;
+      }
+  }
+  .reviews{
+    &__counter-item{
+      margin-bottom: 20px;
+      span{
+        font-size: 26px;
+      }
+    }
+    &__counter-text{
+      line-height: 30px;
+    }
+    &__title{
+      margin-bottom: 30px;
+    }
+  }
+  .slider{
+    &__item-img{
+      position: static;
+    }
+  }
+
+
+  .scroll{
+    display: none;
+  }
+}
+
+
+
+
+
+@import 'media';
