@@ -16,13 +16,14 @@
   }
 }
 
-.header{
+.header {
   padding: 40px 0;
   background-color: $color-bg;
   position: fixed;
   width: 100%;
   z-index: 100;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,38 +31,38 @@
   }
 }
 
-.menu{
-  &__btn{
+.menu {
+  &__btn {
     display: none;
   }
-  &__list{
+
+  &__list {
     display: flex;
   }
+
   &__list-link {
-    @extend %roadradio-700;
+    display: inline-block;
+    padding: 0 20px;
     text-transform: uppercase;
     border-radius: 15px;
     border-bottom: 1px solid transparent;
     transition: all .3s;
-  
+
     &:hover {
       border-bottom: 1px solid $accent;
       color: $accent;
     }
   }
-  &__list-item{
-    padding: 0 20px;    
-  }
-  
+
 }
 
-.phone{  
-  &__link{
+.phone {
+  &__link {
     font-size: 20px;
     @extend %roadradio-700;
     padding-left: 30px;
     position: relative;
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -74,26 +75,29 @@
   }
 }
 
-.content{
+.content {
   padding-top: 125px;
   background-color: $color-bg;
 }
 
-.main{
+.main {
   height: 850px;
   width: 100%;
   background-image: url(../images/main-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  &__inner{
+
+  &__inner {
     width: 685px;
     padding-top: 260px;
   }
-  &__title{
+
+  &__title {
     margin-bottom: 35px;
   }
-  &__apply{
+
+  &__apply {
     margin-right: 25px;
   }
 }
@@ -143,18 +147,21 @@
   }
 }
 
-.drivers{
+.drivers {
   display: flex;
   justify-content: space-between;
-  &__box{
+
+  &__box {
     width: 680px;
     height: 500;
     position: relative;
   }
-  &__box-qualifications{
-    p{
+
+  &__box-qualifications {
+    p {
       padding-left: 70px;
     }
+
     &::before {
       content: '';
       position: absolute;
@@ -165,9 +172,10 @@
       background-image: url(../images/icons/qualifications.svg);
       background-repeat: no-repeat;
       background-size: cover;
-    }    
+    }
   }
-  &__box-training{
+
+  &__box-training {
     &::before {
       content: '';
       position: absolute;
@@ -178,9 +186,10 @@
       background-image: url(../images/icons/drivers.svg);
       background-repeat: no-repeat;
       background-size: cover;
-    }    
+    }
   }
-  &__title{
+
+  &__title {
     text-transform: uppercase;
     font-size: 48px;
     line-height: 52px;
@@ -188,17 +197,19 @@
     @extend %roadradio-700;
     margin-bottom: 30px;
   }
-  &__text{
+
+  &__text {
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 20px;
   }
 }
 
-.why{
+.why {
   padding: 120px 0 60px;
   position: relative;
-  &::before{
+
+  &::before {
     content: '';
     position: absolute;
     background-image: url(../images/smoke-left-why.png);
@@ -208,7 +219,8 @@
     left: 0;
     top: 490px;
   }
-  &::after{
+
+  &::after {
     content: '';
     position: absolute;
     background-image: url(../images/smoke-right-why.png);
@@ -218,37 +230,44 @@
     right: 0;
     top: 0;
   }
-  &__title{
+
+  &__title {
     text-align: center;
     margin-bottom: 70px;
   }
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__inner-left{
+
+  &__inner-left {
     margin-right: 10px;
   }
-  &__inner-right{
+
+  &__inner-right {
     margin-left: 10px;
   }
-  &__item{
+
+  &__item {
     padding: 30px;
     margin-bottom: 40px;
     border-radius: 15px;
     background: linear-gradient(270deg, #081724 12.45%, rgba(8, 23, 36, 0.00) 100%), #1B2733;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
 }
 
-.equipment{
+.equipment {
   padding: 60px 0;
   position: relative;
   z-index: 10;
-  &::before{
+
+  &::before {
     content: '';
     position: absolute;
     background-image: url(../images/bg-equipment.png);
@@ -260,45 +279,55 @@
     height: 540px;
     z-index: -1;
   }
-  &__title{
+
+  &__title {
     text-align: center;
     margin-bottom: 60px;
   }
-  &__text{
+
+  &__text {
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 60px;
   }
-  &__items{
+
+  &__items {
     display: flex;
     justify-content: space-between;
   }
-  &__item{
+
+  &__item {
     width: 100%;
-    & + .equipment__item{
+
+    &+.equipment__item {
       margin-left: 40px;
     }
   }
-  &__item-img{
+
+  &__item-img {
     height: 300px;
   }
-  &__item-info{
+
+  &__item-info {
     padding: 30px;
   }
 }
 
-.reviews{
+.reviews {
   padding: 120px 0;
   position: relative;
-  &__title{
+
+  &__title {
     margin-bottom: 70px;
     text-align: center;
   }
-  &__btn{
+
+  &__btn {
     margin: 0 auto;
     display: block;
   }
-  &::before{
+
+  &::before {
     content: '';
     position: absolute;
     background-image: url(../images/smoke-left-reviews.png);
@@ -308,6 +337,7 @@
     width: 260px;
     height: 610px;
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -318,6 +348,7 @@
     width: 260px;
     height: 640px;
   }
+
   &__counter {
     display: flex;
     flex-wrap: wrap;
@@ -326,17 +357,20 @@
     background: #081724;
     margin-bottom: 90px;
   }
+
   &__counter-item {
     padding: 50px 30px;
     margin: 0 10px;
     border-radius: 15px;
     border-right: 1px solid #E74E0F;
     background: linear-gradient(270deg, #081724 12.45%, rgba(8, 23, 36, 0.00) 100%), #1B2733;
+
     span {
       color: #E74E0F;
       font-size: 36px;
     }
   }
+
   &__counter-value {
     display: block;
     @extend %roadradio-900;
@@ -344,21 +378,24 @@
     font-size: 38px;
     margin-bottom: 20px;
   }
-  &__counter-text{
+
+  &__counter-text {
     line-height: 40px;
   }
 }
 
-.slider{
+.slider {
   margin-bottom: 60px;
-  &__item{
+
+  &__item {
     max-width: 680px;
     min-height: 360px;
     padding: 30px;
     border-radius: 15px;
     background: linear-gradient(270deg, #081724 12.45%, rgba(8, 23, 36, 0.00) 100%), #1B2733;
     position: relative;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       width: 50px;
@@ -369,7 +406,8 @@
       background-repeat: no-repeat;
     }
   }
-  &__item-img{
+
+  &__item-img {
     position: absolute;
     width: 90px;
     height: 90px;
@@ -377,48 +415,56 @@
     left: 275px;
     border-radius: 15px;
   }
-  &__item-author{
+
+  &__item-author {
     margin-bottom: 30px;
   }
 }
 
-.slick-slide{
+.slick-slide {
   padding-top: 50px;
 }
 
-.footer{
+.footer {
   padding: 80px 0 70px;
   background-color: #1B2733;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
   }
-  &__logo{
+
+  &__logo {
     width: 375px;
   }
-  &__logo-link{
+
+  &__logo-link {
     display: block;
     margin-bottom: 30px;
   }
-  &__contacts{
+
+  &__contacts {
     width: 340px;
   }
-  &__contacts-title{
+
+  &__contacts-title {
     margin-bottom: 30px;
   }
+
   &__adress,
   &__phone,
-  &__email{
+  &__email {
     display: block;
     padding-left: 25px;
     position: relative;
     @extend %opensans-600;
     line-height: 40px;
   }
-  &__adress{
-    &::before{
+
+  &__adress {
+    &::before {
       content: '';
       position: absolute;
       width: 15px;
@@ -428,7 +474,8 @@
       background-image: url(../images/icons/home-icon.svg);
     }
   }
-  &__phone{
+
+  &__phone {
     &::before {
       content: '';
       position: absolute;
@@ -439,7 +486,8 @@
       background-image: url(../images/icons/phone-icon.svg);
     }
   }
-  &__email{
+
+  &__email {
     &::before {
       content: '';
       position: absolute;
@@ -450,273 +498,310 @@
       background-image: url(../images/icons/email-icon.svg);
     }
   }
-  &__social{
+
+  &__social {
     width: 330px;
   }
-  &__social-title{
+
+  &__social-title {
     margin-bottom: 30px;
   }
-  &__social-item{
+
+  &__social-item {
     display: flex;
     justify-content: space-between;
   }
 }
 
 
-@media (max-width: 1270px){
-  .about{
-    &__inner-top{
+@media (max-width: 1270px) {
+  .about {
+    &__inner-top {
       padding: 30px 0;
     }
   }
-  .drivers{
+
+  .drivers {
     display: block;
-    &__box{
+
+    &__box {
       width: 100%;
       margin: 0 auto 80px;
-      &::before{
+
+      &::before {
         top: -10px;
         left: 0;
         width: 60px;
         height: 60px;
       }
     }
-    &__box-qualifications{
-      p{
+
+    &__box-qualifications {
+      p {
         padding-left: 0;
       }
     }
   }
-  .reviews{
-    &__counter-item{
+
+  .reviews {
+    &__counter-item {
       width: 47%;
       margin: 0 auto 30px;
     }
   }
 }
 
-@media (max-width: 1200px){
-  .menu{
-    &__list-item{
+@media (max-width: 1200px) {
+  .menu {
+    &__list-link {
       padding: 0 10px;
     }
   }
-  .why-img{
+
+  .why-img {
     display: none;
   }
-  .why{
+
+  .why {
     padding: 60px 0 30px;
-    &__inner{
+
+    &__inner {
       display: block;
     }
-    &__inner-left{
+
+    &__inner-left {
       margin-left: 10px;
       margin-bottom: 40px;
     }
   }
-  .equipment{
-    &__items{
+
+  .equipment {
+    &__items {
       display: block;
     }
-    &__item{
+
+    &__item {
       display: flex;
       justify-content: space-between;
       align-items: start;
       width: 100%;
       margin-bottom: 30px;
     }
-    &__item-info{
+
+    &__item-info {
       padding: 15px;
     }
-    &__item+.equipment__item{
+
+    &__item+.equipment__item {
       margin-left: 0;
     }
-    &__title{
+
+    &__title {
       margin-bottom: 30px;
     }
   }
 }
 
-@media (max-width: 1100px){
-  .footer{
+@media (max-width: 1100px) {
+  .footer {
     padding: 80px 0 110px;
+
     &__logo,
-    &__contacts{
+    &__contacts {
       width: 100%;
       margin-bottom: 50px;
     }
-    &__contacts-title{
+
+    &__contacts-title {
       margin-bottom: 10px;
     }
   }
 }
 
-@media (max-width: 1050px){
-  .menu{
+@media (max-width: 1050px) {
+  .menu {
     order: 1;
     margin-left: 40px;
+
     &__list {
-        transform: translateY(-200%);
+      transform: translateY(-200%);
+      position: absolute;
+      top: 120px;
+      width: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      transition: all .3s;
+      background-color: #fff;
+
+      &.menu__list--active {
+        transform: translateY(0%);
+        background-color: #081724;
+        padding: 10px 0;
+      }
+    }
+
+    &__list-item+.menu__list-item {
+      padding-left: 15px;
+    }
+
+    &__list-link {
+      width: 100%;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    &__list-item {
+      padding: 20px 0 0;
+      display: block;
+    }
+
+    &__btn {
+      width: 30px;
+      height: 23px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0;
+
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: $accent;
+      }
+
+      &::after,
+      &::before {
+        content: '';
         position: absolute;
-        top: 120px;
         width: 100%;
-        left: 0;
-        flex-direction: column;
-        align-items: center;
-        z-index: 5;
-        transition: all .3s;
-        background-color: #fff;
-    
-        &.menu__list--active {
-          transform: translateY(0%);
-          background-color: #081724;
-          padding: 10px 0;
-        }
+        height: 3px;
+        background-color: $accent;
       }
-    
-      &__list-item+.menu__list-item {
-        padding-left: 15px;
+
+      &::before {
+        top: 0;
       }
-    
-      &__list-item {
-        width: 100%;
-        padding: 0 15px;
-        text-align: center;
+
+      &::after {
+        bottom: 0;
       }
-    
-      &__list-link {
-        padding: 20px 0 0;
-        display: block;
-      }
-    
-      &__btn {
-        width: 30px;
-        height: 23px;
-        border: none;
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        padding: 0;
-    
-        span {
-          width: 100%;
-          height: 3px;
-          background-color: $accent;
-        }
-    
-        &::after,
-        &::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 3px;
-          background-color: $accent;
-        }
-    
-        &::before {
-          top: 0;
-        }
-    
-        &::after {
-          bottom: 0;
-        }
-      }
+    }
   }
-  .phone{
+
+  .phone {
     margin-left: auto;
   }
 }
 
-@media (max-width: 900px){
-  .main{
+@media (max-width: 900px) {
+  .main {
     height: 730px;
-    &__inner{
+
+    &__inner {
       padding-top: 200px;
     }
   }
-  .why{
+
+  .why {
     padding: 50px 0 30px;
   }
+
   .equipment {
-    &::before{
+    &::before {
       background-image: none;
     }
+
     &__items {
       display: block;
     }
-  
+
     &__item {
       display: block;
     }
   }
-  .reviews{
+
+  .reviews {
     padding: 10px 0 30px;
   }
 }
 
-@media (max-width: 740px){
-  .main{
+@media (max-width: 740px) {
+  .main {
     height: 660px;
-    &__inner{
+
+    &__inner {
       width: 100%;
       padding-top: 140px;
     }
-    .button{
+
+    .button {
       width: 100%;
       margin-bottom: 20px;
     }
-    &__apply{
+
+    &__apply {
       margin-right: 0;
     }
   }
-  .title{
+
+  .title {
     font-size: 58px;
   }
-  .why{
-    &__item{
+
+  .why {
+    &__item {
       padding: 20px;
       margin-bottom: 20px;
     }
-    &__inner-left{
+
+    &__inner-left {
       margin-bottom: 20px;
     }
-    &__title{
+
+    &__title {
       margin-bottom: 40px;
     }
   }
 }
 
 @media (max-width: 650px) {
-  .drivers{
-    &__title{
+  .drivers {
+    &__title {
       font-size: 38px;
       line-height: 40px;
     }
-    &__box{
-      p{
+
+    &__box {
+      p {
         font-size: 16px;
         line-height: 30px;
       }
     }
   }
+
   .reviews {
     &__counter-item {
       width: 80%;
       padding: 30px 30px;
     }
   }
-  .slider{
-    &__item{
+
+  .slider {
+    &__item {
       max-width: 500px;
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 510px) {
   .header {
     padding: 25px 0;
+
     &__inner {
       padding-right: 0;
     }
@@ -728,7 +813,8 @@
     &__list {
       top: 140px;
     }
-    &__list-link{
+
+    &__list-item {
       padding: 15px 0 0;
     }
   }
@@ -740,49 +826,59 @@
     padding-right: 15px;
     margin-top: 20px;
   }
-  .title{
+
+  .title {
     font-size: 48px;
   }
-  .equipment{
+
+  .equipment {
     padding: 30px 0;
-    &__item-img{
+
+    &__item-img {
       height: 100%;
     }
   }
-  .drivers{
-    &__box{
-      &::before{
+
+  .drivers {
+    &__box {
+      &::before {
         top: -70px;
       }
     }
+
     &__title {
-        font-size: 28px;
-        line-height: 36px;
-        margin-bottom: 15px;
-      }
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 15px;
+    }
   }
-  .reviews{
-    &__counter-item{
+
+  .reviews {
+    &__counter-item {
       margin-bottom: 20px;
-      span{
+
+      span {
         font-size: 26px;
       }
     }
-    &__counter-text{
+
+    &__counter-text {
       line-height: 30px;
     }
-    &__title{
+
+    &__title {
       margin-bottom: 30px;
     }
   }
-  .slider{
-    &__item-img{
+
+  .slider {
+    &__item-img {
       position: static;
     }
   }
 
 
-  .scroll{
+  .scroll {
     display: none;
   }
 }
